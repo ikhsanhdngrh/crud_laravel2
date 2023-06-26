@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 18, 2023 at 12:50 PM
+-- Generation Time: Jun 26, 2023 at 12:25 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -107,28 +107,6 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `produks`
---
-
-CREATE TABLE `produks` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `nama` varchar(255) NOT NULL,
-  `deskripsi` text NOT NULL,
-  `harga` int(11) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `produks`
---
-
-INSERT INTO `produks` (`id`, `nama`, `deskripsi`, `harga`, `created_at`, `updated_at`) VALUES
-(3, 'Baju Tshirt Biru', 'Baju kualitas impor', 25000, '2023-06-18 03:46:46', '2023-06-18 03:46:46');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `users`
 --
 
@@ -188,12 +166,6 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
--- Indexes for table `produks`
---
-ALTER TABLE `produks`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -221,12 +193,6 @@ ALTER TABLE `migrations`
 --
 ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `produks`
---
-ALTER TABLE `produks`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
